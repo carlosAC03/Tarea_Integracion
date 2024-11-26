@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+      }
+      .container {
+        width: 80%;
+        max-width: 600px;
+        max-height: 400px;
+        overflow-y: auto;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .container2 {
+        position: relative;
+      }
+      .caja {
+        width: 180px;
+        height: 180px;
+        background-color: #30b037;
+        color: #fff;
+        text-align: center;
+        line-height: 180px;
+        margin: 15px;
+        float: left;
+        font-size: 18px;
+        font-family: Arial;
+      }
+      .caja1 {
+        background-color: #c0392b;
+        -webkit-transition: background-color 1s linear;
+        transition: background-color 1s linear;
+      }
+      .caja1:hover {
+        background-color: #3f51b5;
+      }
+      .caja2 {
+        background-color: #9b59b6;
+        -webkit-transition: font-size 1s ease;
+        transition: font-size 1s ease;
+      }
+      .caja2:hover {
+        font-size: 28px;
+      }
+      .caja3 {
+        background-color: #2980b9;
+        -webkit-transition: color 1s linear;
+        transition: color 1s linear;
+      }
+      .caja3:hover {
+        color: yellow;
+      }
+      @media (max-width: 768px) {
+        .container {
+          width: 90%;
+          max-height: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tarea de Integración</h1>
+    <div class="container">
+      <ul>
+        <li><a href="Intermedio/index.html">Intermedio</a></li>
+        <li><a href="Avanzado/index.html">Avanzado</a></li>
+      </ul>
+    </div>
+    <div class="container2">
+      <div class="caja caja1">Fondo</div>
+      <div class="caja caja2">Apliar</div>
+      <div class="caja caja3">Letra</div>
+    </div>
+  </body>
+</html>

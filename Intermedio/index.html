@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Enlaces</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      h1 {
+        margin: 20px 0;
+      }
+
+      .container {
+        width: 80%;
+        max-width: 600px;
+        max-height: 400px;
+        overflow-y: auto;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin: 10px 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #007bff;
+        font-size: 18px;
+        cursor: pointer;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #0056b3;
+      }
+
+      .breadcrumb a:first-child:hover {
+        cursor: grab;
+      }
+
+      a:hover::after {
+        content: attr(href);
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        background-color: #333;
+        color: #fff;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        transform: translateY(-5px);
+        opacity: 0;
+        transition: opacity 0.3s, transform 0.3s;
+      }
+
+      a:hover::after {
+        opacity: 1;
+        transform: translateY(-10px);
+      }
+
+      .breadcrumb {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      .breadcrumb a {
+        text-decoration: none;
+        color: #007bff;
+      }
+
+      .breadcrumb span {
+        color: #555;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        gap: 10px;
+      }
+
+      .pagination .circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .pagination .circle:hover {
+        background-color: #007bff;
+        color: #fff;
+        transform: scale(1.1);
+      }
+
+      .pagination .circle.active {
+        background-color: #0056b3;
+        color: #fff;
+      }
+
+      .container2 {
+        position: relative;
+      }
+      .caja {
+        width: 180px;
+        height: 180px;
+        background-color: #30b037;
+        color: #fff;
+        text-align: center;
+        line-height: 180px;
+        margin: 15px;
+        float: left;
+        font-size: 18px;
+        font-family: Arial;
+      }
+      .caja4 {
+        background-color: #3498db;
+        -webkit-transition: 1s linear;
+        transition: 1s linear;
+      }
+      .caja4:hover {
+        line-height: 300px;
+      }
+      .caja5 {
+        border-radius: 0px;
+        background-color: #17a589;
+        -webkit-transition: 1s linear;
+        transition: 1s linear;
+      }
+      .caja5:hover {
+        border-radius: 20px;
+      }
+      .caja6 {
+        -webkit-transition: 1s linear;
+        transition: 1s linear;
+        background-color: #f1c40f;
+      }
+      .caja6:hover {
+        -webkit-box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+        box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          width: 90%;
+          max-height: 300px;
+        }
+
+        a {
+          font-size: 16px;
+        }
+
+        .breadcrumb {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lista de Páginas</h1>
+
+    <nav class="breadcrumb">
+      <a href="../index.html">Inicio</a> &gt;
+      <span>Lista de Enlaces</span>
+    </nav>
+
+    <div class="container2">
+      <div class="caja caja4">Lineheight</div>
+      <div class="caja caja5">Border-radius</div>
+      <div class="caja caja6">Boxshadow</div>
+    </div>
+
+    <div class="container">
+      <ul>
+        <li><a href="ejemplo1.html">Página 1</a></li>
+        <li><a href="ejemplo2.html">Página 2</a></li>
+        <li><a href="ejemplo3.html">Página 3</a></li>
+        <li><a href="ejemplo4.html">Página 4</a></li>
+        <li><a href="ejemplo5.html">Página 5</a></li>
+        <li><a href="ejemplo6.html">Página 6</a></li>
+        <li><a href="ejemplo7.html">Página 7</a></li>
+        <li><a href="ejemplo8.html">Página 8</a></li>
+        <li><a href="ejemplo9.html">Página 9</a></li>
+        <li><a href="ejemplo10.html">Página 10</a></li>
+        <li><a href="ejemplo11.html">Página 11</a></li>
+        <li><a href="ejemplo12.html">Página 12</a></li>
+        <li><a href="ejemplo13.html">Página 13</a></li>
+        <li><a href="ejemplo14.html">Página 14</a></li>
+        <li><a href="ejemplo15.html">Página 15</a></li>
+        <li><a href="ejemplo16.html">Página 16</a></li>
+        <li><a href="ejemplo17.html">Página 17</a></li>
+      </ul>
+    </div>
+
+    <div class="pagination">
+      <div class="circle">&laquo;</div>
+      <div class="circle active">1</div>
+      <div class="circle">2</div>
+      <div class="circle">3</div>
+      <div class="circle">4</div>
+      <div class="circle">5</div>
+      <div class="circle">&raquo;</div>
+    </div>
+  </body>
+</html>
